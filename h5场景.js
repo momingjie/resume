@@ -58,4 +58,7 @@ function end(e){
 	}
 	
 }
-
+ 
+ setTimeout(function(){
+ 	list[0].firstElementChild.id="a1"
+ },1000)

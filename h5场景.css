@@ -281,8 +281,8 @@ border-radius: 20px 20px 0 0;
 #a3 p:nth-child(6) {
 	-webkit-transform: translate(0, -500px);
 	transform: translate(0, -500px);
-	-webkit-transition: 1s 2.5s, ease-in;
-	transition: 1s 2.5s, ease-in;
+	-webkit-transition: 1s 2.5s ease-in;
+	transition: 1s 2.5s ease-in;
 }
 
 .a4 {
