@@ -5,6 +5,7 @@ var winH=document.documentElement.clientHeight;
 var desW=640;
 var desH=960;
 box.style.webkitTransform="scale("+winH/desH+")";
+
 for (var i=0;i<list.length;i++) {
 	list[i].index=i;
 	list[i].addEventListener("touchstart",start,false);

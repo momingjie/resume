@@ -23,19 +23,19 @@
 	height: 100%;
 }
 
-.list li:nth-child(1) {
+.list li:nth-of-type(1) {
 	background: url(images/m1.png)no-repeat;
 }
 
-.list li:nth-child(2) {
+.list li:nth-of-type(2) {
 	background: url(images/m3.png)no-repeat;
 }
 
-.list li:nth-child(3) {
+.list li:nth-of-type(3) {
 	background: url(images/m4.png)no-repeat;
 }
 
-.list li:nth-child(4) {
+.list li:nth-of-type(4) {
 	background: url(images/m-5.png)no-repeat;
 }
 
@@ -51,7 +51,9 @@
 }
 
 .a1 p {
-	background-color: white;
+	background-color: azure;
+	font-family: "arial, helvetica, sans-serif";
+	border: 5px dashed royalblue;
 	font-size: 26px;
 	line-height: 26px;
 	height: 80px;
@@ -103,9 +105,9 @@
 #a1 div {
 	-webkit-transform: translate(0, 0);
 	opacity: 1;
-	-webkit-transition: 2s 2s;
+	-webkit-transition: 1.5s 1s;
 	transform: translate(0, 0);
-	transition: 2s 2s;
+	transition: 1.5s 1s;
 }
 
 #a1 p {
@@ -118,7 +120,6 @@
 #a1 h2 {
 	opacity: 1;
 	-webkit-transform: rotate(360deg);
-	
 	-webkit-transition: 2s;
 	transform: rotate(360deg);
 	transition: 2s;
@@ -161,61 +162,55 @@
 }
 
 #a2 p:nth-child(1) {
-	-webkit-transform: translate(0, 0);
-	transform: translate(0, 0);
-	opacity: 1;
-	-webkit-transition: all 1s;
-	transition: all 1s;
-}
-
-#a2 p:nth-child(2) {
-	-webkit-animation: mmm 1s linear 0s 1;
-	animation: mmm 1s linear 0s 1;
+	-webkit-animation: mmj 1s linear 0s 3;
+	animation: mmj 1s linear 0s 3;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
 
-@-webkit-keyframes mmm {
-	50%{
-		-webkit-transform: translate(0, 0) ;
-		transform: translate(0, 0) ;
-		opacity: 0.5;
+#a2 p:nth-child(2) {
+	-webkit-animation: mmj 1s linear 1s 2;
+	animation: mmj 1s linear 1s 2;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+
+
+#a2 p:nth-child(3) {
+	-webkit-animation: mmj 1s linear 2s 1;
+	animation: mmj 1s linear 2s 1;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes mmj {
+	0% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	25% {
+		-webkit-transform: translate(0, -100px);
+		transform: translate(0, -100px);
+		opacity: 0.8;
+	}
+	45% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		opacity: 0.6;
+	}
+	65% {
+		-webkit-transform: translate(0, -50px);
+		transform: translate(0, -50px);
+		opacity: 0.8;
 	}
 	100% {
-		-webkit-transform:rotate(360deg);
-		transform: rotate(360deg);
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
 		opacity: 1;
 	}
 }
-
-#a2 p:nth-child(3) {
-	-webkit-animation: mmj 1.25s, 100ms;
-	animation: mmj 1.25s, 100ms ;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode:both ;
-	
-}
-
-@-webkit-keyframes mmj{
-50%{
-	-webkit-transform:translate(0,-50px);
-	transform:translate(0,-50px);
-	opacity: 0.5;}
-75%{
-	-webkit-transform:translate(0,0);
-	transform:translate(0,0);
-}
-85%{
-	-webkit-transform:translate(0,-20px)
-	transform:translate(0,-20px);}
-100%{
-	-webkit-transform: translate(0,0);
-transform: translate(0,0);
-opacity: 1;
-}
-}
-
-
 
 .a3 {
 	width: 100%;
@@ -223,6 +218,8 @@ opacity: 1;
 }
 
 .a3 p {
+	border-right: 2px solid darkcyan;
+	border-left: 2px solid darkcyan;
 	width: 560px;
 	height: 100px;
 	background-color: white;
@@ -232,10 +229,20 @@ opacity: 1;
 	margin-left: -280px;
 	font-size: 24px;
 	opacity: 0;
-	
 }
-.a3 p:nth-child(1){text-align: center;border-radius: 10px 10px 0 0;font-size: 36px;line-height: 36px;}
-.a3 p:nth-child(6){border-radius:0 0 20px 20px;}
+
+.a3 p:nth-child(1) {
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	font-size: 36px;
+	line-height: 36px;
+	border-top: 2px solid darkcyan;
+}
+
+.a3 p:nth-child(6) {
+	border-radius: 0 0 20px 20px;
+	border-bottom: 2px solid darkcyan;
+}
 
 #a3 p {
 	opacity: 1;
@@ -244,10 +251,9 @@ opacity: 1;
 #a3 p:nth-child(1) {
 	-webkit-transform: translate(0, -1000px);
 	transform: translate(0, -1000px);
-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
 	-webkit-transition: 1s;
 	transition: 1s;
-	
 }
 
 #a3 p:nth-child(2) {
@@ -281,8 +287,8 @@ border-radius: 20px 20px 0 0;
 #a3 p:nth-child(6) {
 	-webkit-transform: translate(0, -500px);
 	transform: translate(0, -500px);
-	-webkit-transition: 1s 2.5s ease-in;
-	transition: 1s 2.5s ease-in;
+	-webkit-transition: 1s 2.5s;
+	transition: 1s 2.5s;
 }
 
 .a4 {
@@ -290,89 +296,111 @@ border-radius: 20px 20px 0 0;
 	height: 100%;
 	position: relative;
 }
-.a4 span{position: absolute;left:800px; height: 9.8%;background: white;width: 100%;line-height: 100px;font-size: 36px;color: white;}
-.a4 span:nth-child(1){
+
+.a4 span {
+	position: absolute;
+	left: 800px;
+	height: 9.8%;
+	background: white;
+	width: 100%;
+	line-height: 100px;
+	font-size: 36px;
+	color: white;
+}
+
+.a4 span:nth-child(1) {
 	background: #07939c;
-
 }
-.a4 span:nth-child(2){
+
+.a4 span:nth-child(2) {
 	background: #f20d5e;
-
 }
-.a4 span:nth-child(3){
+
+.a4 span:nth-child(3) {
 	background: #a9f20d;
-	
 }
-.a4 span:nth-child(4){
-	background: #1f2020;
 
+.a4 span:nth-child(4) {
+	background: #1f2020;
 }
-#a4 span:nth-child(1){
-		-webkit-animation: aa1 ease-in 1s ;
-		animation: aa1 ease-in 1s ;
+
+#a4 span:nth-child(1) {
+	-webkit-animation: aa1 ease-in 1s;
+	animation: aa1 ease-in 1s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
-#a4 span:nth-child(2){
-		-webkit-animation: aa2 ease-in 1.5s ;
+
+#a4 span:nth-child(2) {
+	-webkit-animation: aa2 ease-in 1.5s;
 	-webkit-animation-fill-mode: both;
-	animation: aa2 ease-in 1.5s ;
+	animation: aa2 ease-in 1.5s;
 	animation-fill-mode: both;
 }
-#a4 span:nth-child(3){
-		-webkit-animation: aa3 ease-in 2s ;
+
+#a4 span:nth-child(3) {
+	-webkit-animation: aa3 ease-in 2s;
 	-webkit-animation-fill-mode: both;
-	animation: aa3 ease-in 2s ;
+	animation: aa3 ease-in 2s;
 	animation-fill-mode: both;
 }
-#a4 span:nth-child(4){
-		-webkit-animation: aa4 ease-in 2.5s ;
+
+#a4 span:nth-child(4) {
+	-webkit-animation: aa4 ease-in 2.5s;
 	-webkit-animation-fill-mode: both;
-	animation: aa4 ease-in 2.5s ;
+	animation: aa4 ease-in 2.5s;
 	animation-fill-mode: both;
 }
-@-webkit-keyframes aa1{
-	25%{
+
+@-webkit-keyframes aa1 {
+	25% {
 		left: 0;
 	}
-	50%{
+	50% {
 		left: 15px;
 	}
-	75%{
+	75% {
 		left: 10px;
 	}
-	100%{
+	100% {
 		left: 20px;
 		z-index: 100;
-		
 	}
 }
-@-webkit-keyframes aa2{
-	100%{
+
+@-webkit-keyframes aa2 {
+	100% {
 		left: 60px;
 		z-index: 101;
-		
 	}
 }
-@-webkit-keyframes aa3{
-	100%{
+
+@-webkit-keyframes aa3 {
+	100% {
 		left: 100px;
 		z-index: 102;
-		
 	}
 }
-@-webkit-keyframes aa4{
-	100%{
+
+@-webkit-keyframes aa4 {
+	100% {
 		left: 140px;
 		z-index: 103;
-		
 	}
 }
 
 .a4 p {
-	position: absolute;z-index: 200;
+	position: absolute;
+	z-index: 200;
 	background: white;
+	border: 2px dashed seagreen;
+	text-align: center;
+	font-size: 36px;
+	line-height: 200px;
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
 }
+
 .a4 p:nth-of-type(1) {
 	top: -20%;
 	left: -40%;
@@ -384,10 +412,10 @@ border-radius: 20px 20px 0 0;
 }
 
 .a4 p:nth-of-type(2) {
-	top: 40%;
+	top: 30%;
 	left: 55%;
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	background: white;
 	opacity: 0;
@@ -414,59 +442,74 @@ border-radius: 20px 20px 0 0;
 }
 
 #a4 p:nth-of-type(1) {
-	
 	-webkit-animation: nn1 1s 2s;
 	animation: nn1 1s 2s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
-@-webkit-keyframes nn1{
-	100%{
-	left: 100px;
-	top: 200px;
-	opacity: 1;
+
+@-webkit-keyframes nn1 {
+
+	100% {
+		left: 100px;
+		top: 200px;
+		-webkit-transform: rotate(720deg);
+		transform: rotate(720deg);
+		opacity: 1;
 	}
 }
 
 #a4 p:nth-of-type(2) {
-	
 	-webkit-animation: nn2 1s 3s;
 	animation: nn2 1s 3s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
-@-webkit-keyframes nn2{
-100%{
-	opacity: 1;
-	-webkit-transform: scale(2);}
+
+@-webkit-keyframes nn2 {
+	50% {
+		opacity: 0.5;
+		-webkit-transform: scale(3);
+		transform: scale(3);
+		;
+	}
+	100% {
+		-webkit-transform: rotate(3600deg);
+		transform: rotate(3600deg);
+		opacity: 1;
+	}
 }
 
 #a4 p:nth-of-type(3) {
-	
--webkit-animation: nn3 2s 4s;
-animation: nn3 2s 4s;
+	-webkit-animation: nn3 2s 4s;
+	animation: nn3 2s 4s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
-@-webkit-keyframes nn3{
-	100%{
-	left: 300px;
-	top: 560px;
-	opacity: 1;
+
+@-webkit-keyframes nn3 {
+
+	100% {
+		left: 300px;
+		top: 560px;
+		
+		opacity: 1;
 	}
 }
 
 #a4 p:nth-of-type(4) {
-	
 	-webkit-animation: nn4 2s 4s;
 	-webkit-animation-fill-mode: both;
 	animation: nn4 2s 4s;
 	animation-fill-mode: both;
 }
-@-webkit-keyframes nn4{
-	100%{
-		top: 700px;
-	left: 100px;
-	opacity: 1;
+
+@-webkit-keyframes nn4 {
+
+	100% {
+			top: 700px;
+		left: 100px;
+		
+		opacity: 1;
 	}
 }
